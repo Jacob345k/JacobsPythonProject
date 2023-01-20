@@ -23,7 +23,7 @@ driver = webdriver.Edge(edge_driver)
 driver.get("https://steamdb.info/freepackages/")
 
 # Wait for 10 seconds
-time.sleep(10)
+time.sleep(25)
 
 # Locate the "Activate these packages now" button and click it
 activate_button = driver.find_element_by_xpath('//*[@id="content"]/div[2]/div/div[2]/a[1]')
