@@ -29,8 +29,5 @@ time.sleep(10)
 activate_button = driver.find_element_by_xpath('//*[@id="content"]/div[2]/div/div[2]/a[1]')
 activate_button.click()
 
-# Leave the browser open and exit the script
-input("Press any key to exit")
-
 # Close the browser
 driver.quit()
