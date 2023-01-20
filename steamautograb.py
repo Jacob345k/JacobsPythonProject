@@ -1,3 +1,12 @@
+import importlib
+
+try:
+    import selenium
+except ImportError:
+    import subprocess
+    import sys
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "selenium"])
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -19,6 +28,9 @@ time.sleep(10)
 # Locate the "Activate these packages now" button and click it
 activate_button = driver.find_element_by_xpath('//*[@id="content"]/div[2]/div/div[2]/a[1]')
 activate_button.click()
+
+# Leave the browser open and exit the script
+input("Press any key to exit")
 
 # Close the browser
 driver.quit()
